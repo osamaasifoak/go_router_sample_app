@@ -1,6 +1,7 @@
 # go_router_sample_app
 
-A new Flutter project.
+Flutter Navigation 2.0 implementation with the help of go_router
+![sample](sample.gif)
 
 ## Getting Started
 
