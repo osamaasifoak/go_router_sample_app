@@ -3,12 +3,13 @@ import 'package:go_router/go_router.dart';
 
 class DetailScreen extends StatelessWidget {
   /// Constructs a [DetailsScreen]
-  const DetailScreen({Key? key}) : super(key: key);
+  const DetailScreen({Key? key, required this.name}) : super(key: key);
+  final String name;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Details Screen')),
+      appBar: AppBar(title: Text('Hi, $name')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

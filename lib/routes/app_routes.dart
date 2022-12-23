@@ -12,9 +12,30 @@ final GoRouter appRoutes = GoRouter(
       },
       routes: <RouteBase>[
         GoRoute(
-          path: 'details',
+          path: 'details/:name',
           builder: (BuildContext context, GoRouterState state) {
-            return const DetailScreen();
+            final name = state.params['name']!;
+            return DetailScreen(
+              name: name,
+            );
+          },
+        ),
+        GoRoute(
+          path: 'detailsQueryParam',
+          builder: (BuildContext context, GoRouterState state) {
+            final name = state.queryParams['name']!;
+            return DetailScreen(
+              name: name,
+            );
+          },
+        ),
+        GoRoute(
+          path: 'detailsWithExtraParam',
+          builder: (BuildContext context, GoRouterState state) {
+            final name = state.extra! as String;
+            return DetailScreen(
+              name: name,
+            );
           },
         ),
       ],

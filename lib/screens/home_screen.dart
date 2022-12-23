@@ -14,8 +14,22 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: () => context.go('/details'),
-              child: const Text('Go to the Details screen'),
+              onPressed: () => context.go('/details/Osama'),
+              child: const Text('Go to the Details screen with path param'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () => context.go('/detailsQueryParam?name=Osama'),
+              child: const Text('Go to the Details screen with query params'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () => context.go('/detailsWithExtraParam', extra: "Osama"),
+              child: const Text('Go to the Details screen with extra params'),
             ),
           ],
         ),
